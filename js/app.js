@@ -144,3 +144,67 @@ switch(opcion){
 for(let i=1; i<=5;i++){
     console.log(el valor de i es: + i);
 }
+
+
+// ejercicio 8
+
+let contador=1;
+
+while(contador<=5){
+    console.log(contador);
+    contador++;
+}
+
+//ejercicio 9 -- mostrar los numeros de 20 al 1 utilizando while
+
+let contador = 20;
+
+while (contador >= 1) {
+    console.log(contador);
+    contador--;
+}
+
+// ejercicio 10 --  solicitar una contraseña, mientras la contraseña no sea 1234 seguir solicitando
+
+let contraseña = prompt("Ingrese la contraseña:");
+
+while (contraseña !== "1234") {
+    contraseña = prompt("Contraseña incorrecta. Intente nuevamente:");
+}
+
+console.log("¡Contraseña correcta! Bienvenido.");
+
+/**
+ * parte 9 Funciones sin parametros
+ *      EJEMPLOS
+ * 
+ * javascript
+ *  function saludar(){
+ * console.log("Bienvenido al sistema");
+ * }
+ * saludar();
+ */
+
+// ejercicio 11 -- Crear una función llamada: 
+
+function mostrarUniversidad() {
+    console.log("Universidad Autónoma Gabriel René Moreno");
+}
+mostrarUniversidad();
+
+/*      Parte 10. Funciones con Parámetros 
+Ejemplo 
+JavaScript 
+function saludar(nombre){ 
+console.log("Hola " + nombre); 
+} 
+saludar("Juan"); */
+
+//EJERCICIO 12 -- Crear una función llamada: mostrarNombre que reciba un parámetro llamado nombre y muestre en consola el mensaje "Hola, [nombre]".
+
+function mostrarNombre(nombre) {
+    console.log("Hola, " + nombre);
+}
+mostrarNombre("Juan");  
+
+//
