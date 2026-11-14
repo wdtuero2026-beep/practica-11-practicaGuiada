@@ -1,4 +1,4 @@
-// Ejercicio 1
+// Ejercicio 1  --Declare variables para almacenar
 let nombre1 = "Juan";
 let edad1 = 20;
 let estatura = 1.75;
@@ -6,7 +6,7 @@ let activo = true;
 console.log(nombre1);
 console.log(edad1);
 
-// Ejercicio 2
+// Ejercicio 1  -- Solicitar al usuario su nombre, edad, carrera y promedio, luego mostrarlo en consola.
 
 let nombreEstudiante = "David";
 let edad2 = 29;
@@ -19,7 +19,7 @@ console.log(promedio);
 
 
 
-//Eejrcicio 3
+// ejemplo
 
 
 let nombre2 = prompt("ingrese su nombre");
@@ -142,7 +142,7 @@ switch(opcion){
 
 // for
 for(let i=1; i<=5;i++){
-    console.log(el valor de i es: + i);
+    console.log("el valor de i es: "+ i);
 }
 
 
@@ -157,11 +157,11 @@ while(contador<=5){
 
 //ejercicio 9 -- mostrar los numeros de 20 al 1 utilizando while
 
-let contador = 20;
+let contadorUno = 20;
 
-while (contador >= 1) {
-    console.log(contador);
-    contador--;
+while (contadorUno >= 1) {
+    console.log(contadorUno);
+    contadorUno--;
 }
 
 // ejercicio 10 --  solicitar una contraseña, mientras la contraseña no sea 1234 seguir solicitando
@@ -205,6 +205,91 @@ saludar("Juan"); */
 function mostrarNombre(nombre) {
     console.log("Hola, " + nombre);
 }
-mostrarNombre("Juan");  
+mostrarNombre("Juan");
 
-//
+
+
+// EJERCICIO 13 -- Crear una función llamada: sumar que reciba dos parámetros llamados a y b, y devuelva la suma de ambos.
+
+function sumar(a, b) {
+    let resultado = a + b;
+    console.log("Resultado: " + resultado);
+}
+
+let numero1 = Number(prompt("Ingrese el primer número:"));
+let numero2 = Number(prompt("Ingrese el segundo número:"));
+
+sumar(numero1, numero2);
+
+/**
+ * Parte 11. Funciones con Retorno 
+Ejemplo 
+JavaScript 
+function multiplicar(a,b){ 
+return a*b; 
+} 
+let resultado = multiplicar(3,4); 
+console.log(resultado); 
+ */
+
+/** EJERCICIO 14 --
+ * Crear una función: 
+JavaScript 
+calcularArea(base,altura) 
+que retorne el área de un triángulo. 
+Fórmula: 
+(base × altura) / 2 
+ */
+
+function calcularArea(base, altura) {
+    return (base * altura) / 2;
+}
+let resultado = calcularArea(5, 8);
+console.log(resultado);
+
+/**
+ * Parte 12. Ejercicio Integrador Tipo Examen 
+Ejercicio 15 
+Solicitar la cantidad de estudiantes. 
+Luego: 
+1. Pedir las notas. 
+2. Determinar si aprobaron o reprobaron. 
+3. Contar aprobados. 
+4. Contar reprobados. 
+5. Utilizar una función para evaluar cada nota. 
+Salida Esperada 
+Aprobados: 8 
+Reprobados: 2 
+Pista 
+JavaScript 
+function evaluarNota(nota){ 
+} 
+let aprobados = 0; 
+let reprobados = 0; 
+let cantidad = Number(prompt("Cantidad de estudiantes")); 
+for(let i=1; i<=cantidad; i++){ 
+}
+ * 
+ */
+
+function evaluarNota(nota) {
+    if (nota >= 51) {
+        return true;
+    } else {
+        return false;
+    }
+}
+let aprobados = 0;
+let reprobados = 0;
+let cantidad = Number(prompt("Cantidad de estudiantes"));
+for (let i = 1; i <= cantidad; i++) {
+    let nota = Number(prompt("Ingrese la nota del estudiante " + i));
+    if (evaluarNota(nota)) {
+        aprobados++;
+    } else {
+        reprobados++;
+    }
+}
+console.log("Aprobados: " + aprobados);
+console.log("Reprobados: " + reprobados);
+
